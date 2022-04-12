@@ -1,0 +1,28 @@
+{
+  "root": "apps/nx-daily-learning-e2e",
+  "sourceRoot": "apps/nx-daily-learning-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/nx-daily-learning-e2e/cypress.json",
+        "devServerTarget": "nx-daily-learning:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "nx-daily-learning:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/nx-daily-learning-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["nx-daily-learning"]
+}

@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "projects": {
+    "api": "apps/api",
+    "api-interfaces": "libs/api-interfaces",
+    "nx-daily-learning": "apps/nx-daily-learning",
+    "nx-daily-learning-e2e": "apps/nx-daily-learning-e2e"
+  }
+}
